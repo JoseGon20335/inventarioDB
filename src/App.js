@@ -21,15 +21,16 @@ class App extends Component {
     const Firedb = (e) => {
       console.log(e);
       inventario = getData();
-      console.log("********************************",inventario)
+      console.log(inventario)
     }
   
     return (
       <div className="App">
         <p>HOLA BUENAS TARDES</p>
+        <button onClick={Firedb}>iamok</button>
           <div className='mainContent'>
             {
-              <div>{this.fetchInven()}</div>
+              <div>hola2</div>
             }
           </div>
       </div>
