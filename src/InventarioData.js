@@ -17,8 +17,7 @@ function getData(){
     let nombre = [];
     let precio = [];
 
-    db.collection('inventario')
-    .get()
+    db.get()
     .then(querySnapshot => {
         querySnapshot.forEach(doc => {
             ID.push(doc.get("ID"))
@@ -34,7 +33,6 @@ function getData(){
         });
 
         for(let i=0; i< ID.length; i++){
-            console.log("ENTRO AL FETCH")
             let temp = {
                 ID: ID[i],
                 ID_categoria: ID_categoria[i],
@@ -49,9 +47,10 @@ function getData(){
             }
 
             data.push(temp)
-            console.log("aqui llego", data)
         }
         
     });
+
+    return(data)
 }
 export default getData
