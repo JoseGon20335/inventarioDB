@@ -17,7 +17,7 @@ function getData(){
     let nombre = [];
     let precio = [];
 
-    db.get()
+    db.collection('inventario').get()
     .then(querySnapshot => {
         querySnapshot.forEach(doc => {
             ID.push(doc.get("ID"))
