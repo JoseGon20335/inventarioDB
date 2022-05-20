@@ -1,21 +1,25 @@
 import { db } from '../firebase-config';
+import regeneratorRuntime from "regenerator-runtime";
 
-function getData(){
+
+async function  getData(){
 
     let data = [];
 
-    let ID = [];
-    let ID_categoria = [];
-    let ID_marca = [];
-    let calificacion = [];
-    let cant_ventas = [];
-    let cantidad = [];
-    let descripcion = [];
-    let imagen = [];
-    let nombre = [];
-    let precio = [];
+    //let ID = [];
+    //let ID_categoria = [];
+    //let ID_marca = [];
+    //let calificacion = [];
+    //let cant_ventas = [];
+    //let cantidad = [];
+    //let descripcion = [];
+    //let imagen = [];
+    //let nombre = [];
+    //let precio = [];
 
-    db.collection('inventario').get()
+    let col = db.collection('inventario');
+    let datos = await col.get();
+    /*db.collection('inventario').get()
     .then(querySnapshot => {
         querySnapshot.forEach(doc => {
             ID.push(doc.get("ID"))
@@ -47,8 +51,10 @@ function getData(){
             data.push(temp)
         }
         
-    });
+    });*/
 
+    console.log("data",datos.docs);
+    datos.docs.forEach(item=>{data.push(item.data())})
     console.log("data",data);
 
     return(data)

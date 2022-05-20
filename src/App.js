@@ -15,35 +15,26 @@ class App extends Component {
   //   return(temp)
   // }
 
-  hola(){
+  async hola(){
 
     console.log("entro a hola")
 
-    let inventario = getData();
+    let inventario = await getData();
 
     console.log("inventario",inventario)
 
     console.log("inventario2",inventario.length)
     
-    return(
-      <div className='allData'>
-        {
-          <div>hola</div>
-            
-        }
-      </div>
-    )
+    
   }
-
+  componentDidMount() {this.hola()}    
   render(){
-  
+
     return (
       <div className="App">
         <p>HOLA BUENAS TARDES</p>
           <div className='mainContent'>
-            {
-              <div>{this.hola()}</div>
-            }
+            
           </div>
       </div>
     );
