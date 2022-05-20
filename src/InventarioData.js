@@ -2,8 +2,6 @@ import { db } from '../firebase-config';
 
 function getData(){
 
-    console.log("llego al getData")
-
     let data = [];
 
     let ID = [];
@@ -51,6 +49,9 @@ function getData(){
         
     });
 
+    console.log("data",data);
+
     return(data)
+
 }
 export default getData
