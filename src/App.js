@@ -4,17 +4,6 @@ import './App.css';
 
 class App extends Component {
 
-
-  // fetchInven(){
-  //   let inventario = getData();
-  //   let temp = inventario
-  //   console.log("fetch")
-  //   inventario.map(object => (
-  //     console.log(object.ID)
-  //   ))
-  //   return(temp)
-  // }
-
   async hola(){
 
     console.log("entro a hola")
