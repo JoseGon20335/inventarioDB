@@ -19,11 +19,11 @@ class App extends Component {
 
     console.log("entro a hola")
 
-    var inventario = getData();
+    let inventario = getData();
 
     console.log("inventario",inventario)
 
-    console.log("inventario2",inventario)
+    console.log("inventario2",inventario.length)
     
     return(
       <div className='allData'>
@@ -36,42 +36,10 @@ class App extends Component {
   }
 
   render(){
-
-    // const Firedb = (e) => {
-    //   console.log(e);
-    //   let inventario = [];
-
-    //   let temp = {
-    //     ID: "1",
-    //     ID_categoria: "1",
-    //     ID_marca : "1",
-    //     calificacion : "1",
-    //     cant_ventas : "1",
-    //     cantidad : "1",
-    //     descripcion : "1",
-    //     imagen : "1",
-    //     nombre : "1",
-    //     precio : "1"
-    //   }
-
-    //   inventario.push(temp)
-
-      
-    //   inventario.push(getData());
-
-    //   console.log(inventario)
-
-    //   inventario.map((objeto) =>
-    //     console.log("si entre",objeto)
-    //   );
-
-    //   console.log("TU MADRE",inventario)
-    // }
   
     return (
       <div className="App">
         <p>HOLA BUENAS TARDES</p>
-        {/* <button onClick={Firedb}>iamok</button> */}
           <div className='mainContent'>
             {
               <div>{this.hola()}</div>

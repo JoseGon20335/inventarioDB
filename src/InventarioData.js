@@ -31,18 +31,18 @@ function getData(){
         });
 
         for(let i=0; i< ID.length; i++){
-            let temp = {
-                ID: ID[i],
-                ID_categoria: ID_categoria[i],
-                ID_marca : ID_marca[i],
-                calificacion : calificacion[i],
-                cant_ventas : cant_ventas[i],
-                cantidad : cantidad[i],
-                descripcion : descripcion[i],
-                imagen : imagen[i],
-                nombre : nombre[i],
-                precio : precio[i]
-            }
+            let temp = [
+                ID[i],
+                ID_categoria[i],
+                ID_marca[i],
+                calificacion[i],
+                cant_ventas[i],
+                cantidad[i],
+                descripcion[i],
+                imagen[i],
+                nombre[i],
+                precio[i]
+            ]
 
             data.push(temp)
         }
