@@ -53,8 +53,11 @@ async function  getData(){
         
     });*/
 
-    console.log("data",datos.docs);
-    datos.docs.forEach(item=>{data.push(item.data())})
+    //console.log("data",datos.docs);
+    datos.docs.forEach( item => {
+        //console.log("************************ITEM", item.data().nombre)
+        data.push(item.data())
+    })
     console.log("data",data);
 
     return(data)
