@@ -1,41 +1,45 @@
-import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Lista from "./Lista";
+//import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import getData from './InventarioData';
 import './App.css';
 
 class App extends Component {
-
-
-  // fetchInven(){
-  //   let inventario = getData();
-  //   let temp = inventario
-  //   console.log("fetch")
-  //   inventario.map(object => (
-  //     console.log(object.ID)
-  //   ))
-  //   return(temp)
-  // }
 
   async hola(){
 
     console.log("entro a hola")
 
     let inventario = await getData();
+    let a = inventario[0];
+    console.log("prueba: ", inventario[0])
+    console.log("prueba 2: ", a.nombre)
 
     console.log("inventario",inventario)
 
     console.log("inventario2",inventario.length)
     
+
+    for(var i = 0; i < inventario.length; i++)
+    {
+      console.log(" - funciona: ", inventario[i].nombre)
+    }
+
+    return inventario
     
   }
   componentDidMount() {this.hola()}    
+  
   render(){
+    const inv = this.hola().then()
 
     return (
       <div className="App">
-        <p>HOLA BUENAS TARDES</p>
-          <div className='mainContent'>
-            
-          </div>
+        
+        <h2>Inventario</h2>
+          <Lista/>
       </div>
     );
   }
