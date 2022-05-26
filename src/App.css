@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 } */
+
+html{
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
 tbody tr:nth-child(odd) {
     background-color: #E5E5E5;
 }
@@ -16,11 +21,13 @@ table {
 }
 th{
     text-align: center;
+    border: 1px solid #b3adad;
 }
 
 td {
     text-align: center;
     vertical-align: middle;
+    border: 1px solid #b3adad;
 }
 
 .App{
