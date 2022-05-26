@@ -1,44 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import getData from './InventarioData';
 import './App.css';
 
-class App extends Component {
+const App = () => {
 
-  async hola(){
+  //componentDidMount() {this.hola()}   
+  //Id, nombre, cantidad y precio
+  // const [resul, setResul] = useState([]);
 
-    let inventario = await getData();
+  // const traerInventario = () => {
 
-    console.log("ENTRO", inventario)
+  //   let inventario = getData();
 
-    return(
-      <p>hola</p>
-      // inventario.map((object) => (
-        
-      //   <div className='inData' key={object.key}>
-      //     {
-      //       console.log("----------", object.nombre)
-      //     }
-      //   </div>
-      // ))
-    )
+  //   console.log("ENTRO", inventario)
 
-    
-  }
+  //   data = []
 
-  componentDidMount() {this.hola()}    
-  render(){
+  //   for (let index = 0; index < inventario.length; index++) {
 
-    return (
-      <div className="App">
-        <p>HOLA BUENAS TARDES</p>
-        <div className='mainContent'>
-          <div>
-            <p>hola</p>
-          </div>
-        </div>
+  //     data.push()
+      
+  //   }
+
+  //   setResul(inventario);
+  // }
+
+  return (
+    <div className="App">
+      <p>HOLA BUENAS TARDES</p>
+      <div className='mainContent'>
+        {
+          getData()
+        }
       </div>
-    );
-  }
+    </div>
+  );
+  
   
 }
 
