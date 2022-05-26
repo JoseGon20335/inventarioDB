@@ -27,11 +27,16 @@ export default function Lista(){
     }
 
     return(
-        <div>
-            <ul>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad Disponible</th>
+            </tr>
             {setRows()}
-            </ul>
-        </div>
+            
+        </table>
     );
 
 

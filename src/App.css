@@ -4,3 +4,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 } */
+tbody tr:nth-child(odd) {
+    background-color: #E5E5E5;
+}
+
+table {
+  background-color: #ff33cc;
+}
