@@ -33,8 +33,6 @@ class App extends Component {
   componentDidMount() {this.hola()}    
   
   render(){
-    const inv = this.hola().then()
-
     return (
       <div className="App">
         

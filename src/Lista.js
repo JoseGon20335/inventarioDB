@@ -31,8 +31,8 @@ export default function Lista(){
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Precio</th>
                 <th>Cantidad Disponible</th>
+                <th>Precio</th>
             </tr>
             {setRows()}
             

@@ -9,5 +9,25 @@ tbody tr:nth-child(odd) {
 }
 
 table {
-  background-color: #ff33cc;
+  background-color: #e5e5e5;
+  border-color: #172A5D;
+  border: 2px solid;
+  margin: auto;
+}
+th{
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.App{
+    background-color: #172A5D;
+    text-align: center;
+}
+
+h2{
+    color: #E5E5E5;
 }
