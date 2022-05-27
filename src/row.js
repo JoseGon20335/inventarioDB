@@ -96,34 +96,37 @@ export default function Row(props) {
             <PopUp trigger={pregunta} setTrigger={setPregunta}>
                 <div className='preguntaInador'>
                     <div className="grupo1">
+                    <div className="grupo2">
+                            <h3>Deje en blanco para conservar el valor</h3>
+                        </div>
                         <div className="grupo2">
-                            <h3>TITULO</h3>
+                            <h3>Titulo</h3>
                             <input type="text" name='titulo' onChange={readInador}/>
-                            <h3>calificacion</h3>
+                            <h3>Calificacion</h3>
                             <input type="text" name='calificacion' onChange={readInador}/>
-                            <h3>cant_ventas</h3>
+                            <h3>Cant_ventas</h3>
                             <input type="text" name='cant_ventas' onChange={readInador}/>
                         </div>
                         <div className="grupo2">
-                            <h3>cantidad</h3>
+                            <h3>Cantidad</h3>
                             <input type="text" name='cantidad' onChange={readInador}/>
-                            <h3>categoria</h3>
+                            <h3>Categoria</h3>
                             <input type="text" name='categoria' onChange={readInador}/>
-                            <h3>descripcion</h3>
+                            <h3>Descripcion</h3>
                             <input type="text" name='descripcion' onChange={readInador}/>
                         </div>
                         <div className="grupo2">
-                            <h3>fecha</h3>
+                            <h3>Fecha</h3>
                             <input type="text" name='fecha' onChange={readInador}/>
-                            <h3>imagen</h3>
+                            <h3>Imagen</h3>
                             <input type="text" name='imagen' onChange={readInador}/>
-                            <h3>marca</h3>
+                            <h3>Marca</h3>
                             <input type="text" name='marca' onChange={readInador}/>
                         </div>
                         <div className="grupo2">
-                            <h3>nombre</h3>
+                            <h3>Nombre</h3>
                             <input type="text" name='nombre' onChange={readInador}/>
-                            <h3>precio</h3>
+                            <h3>Precio</h3>
                             <input type="text" name='precio' onChange={readInador}/>
                         </div>
                     </div>
