@@ -70,7 +70,7 @@ export default function Row(props) {
     const handleClickPopUp = () => {
 
         db.collection('inventario').doc(id).set({
-            id: id,
+            ID: id,
             titulo: titulo,
             precio: precio,
             cantidad: cantidad,
