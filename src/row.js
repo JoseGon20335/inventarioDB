@@ -10,9 +10,9 @@ export default function Row(props) {
     const handleClick = () => {
 
         db.collection('inventario').doc(id).set({
-            contenido: contenidoS,
-            fecha: fecha,
-            titulo: tituloS
+            cantidad: cantidad,
+            precio: precio,
+            titulo: titulo
         })
     }
 
