@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from "react";
+import React, {useState, useEffect} from "react";
 import getData from './InventarioData';
 import Row from "./row";
 
@@ -28,8 +28,12 @@ export default function Lista(){
             const marca = displayProducts[i].marca;
             const nombre = displayProducts[i].nombre;
 
+            console.log(titulo)
+            console.log(cantidad)
+            console.log(precio)
+
             row.push(
-            <Row id={id} titulo={titulo} precio={precio} cantidad={cantidad} cant_ventas={cant_ventas} calificacion={calificacion} categoria={categoria} descripcion={descripcion} fecha = {fecha} imagen={imagen} marca={marca} nombre={nombre} />
+            <Row id={id} titulo1={titulo} precio1={precio} cantidad1={cantidad} cant_ventas1={cant_ventas} calificacion1={calificacion} categoria1={categoria} descripcion1={descripcion} fecha1 = {fecha} imagen1={imagen} marca1={marca} nombre1={nombre} />
           );
         }
         return row;
@@ -37,17 +41,16 @@ export default function Lista(){
 
     return(
         <table>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Cantidad Disponible</th>
-                <th>Precio</th>
-            </tr>
-            {setRows()}
-            
+            <tbody>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad Disponible</th>
+                    <th>Precio</th>
+                </tr>
+                {setRows()}
+            </tbody>
         </table>
     );
-
-
 }
 

@@ -4,6 +4,7 @@ import { db } from '../firebase-config';
 import PopUp from "./PopUp";
 
 export default function Row(props) {
+
     const { id } = props;
     const { titulo1 } = props;
     const { precio1 } = props;
@@ -16,6 +17,10 @@ export default function Row(props) {
     const {imagen1} = props;
     const {marca1} = props;
     const {nombre1} = props;
+
+    console.log(titulo1)
+    console.log(precio1)
+    console.log(cantidad1)
 
     const [ titulo, setTitulo ] = useState(titulo1);
     const [ precio, setprecio ] = useState(precio1);
@@ -61,23 +66,6 @@ export default function Row(props) {
     
     }
 
-    const handleClick = () => {
-
-        db.collection('inventario').doc(id).set({
-            id: id,
-            titulo: titulo,
-            precio: precio,
-            cantidad: cantidad,
-            cant_ventas: cant_ventas,
-            calificacion: calificacion,
-            categoria: categoria,
-            descripcion: descripcion,
-            fecha: fecha,
-            imagen: imagen,
-            marca: marca,
-            nombre: nombre
-        })
-    }
 
     const handleClickPopUp = () => {
 
@@ -100,11 +88,10 @@ export default function Row(props) {
     return (
         <tr key={id}>
             <td>{id}</td>
-            <td>{titulo}</td>
-            <td>{cantidad}</td>
-            <td>{"$" + precio}</td>
-            <button onClick={handleClick}>Editar</button>
-            <button className='botonAgregar' onClick={() => setPregunta(true)}>+</button>
+            <td>{titulo1}</td>
+            <td>{cantidad1}</td>
+            <td>{"$" + precio1}</td>
+            <button className='botonAgregar' onClick={() => setPregunta(true)}>Editar</button>
 
             <PopUp trigger={pregunta} setTrigger={setPregunta}>
                 <div className='preguntaInador'>
