@@ -19,8 +19,17 @@ export default function Lista(){
             const titulo = displayProducts[i].nombre;
             const precio = displayProducts[i].precio;
             const cantidad = displayProducts[i].cantidad;
+            const cant_ventas = displayProducts[i].cant_ventas;
+            const calificacion = displayProducts[i].calificacion;
+            const categoria = displayProducts[i].categoria;
+            const descripcion = displayProducts[i].descripcion;
+            const fecha = displayProducts[i].fecha;
+            const imagen = displayProducts[i].imagen;
+            const marca = displayProducts[i].marca;
+            const nombre = displayProducts[i].nombre;
+
             row.push(
-            <Row id={id} titulo={titulo} precio={precio} cantidad={cantidad}/>
+            <Row id={id} titulo={titulo} precio={precio} cantidad={cantidad} cant_ventas={cant_ventas} calificacion={calificacion} categoria={categoria} descripcion={descripcion} fecha = {fecha} imagen={imagen} marca={marca} nombre={nombre} />
           );
         }
         return row;
